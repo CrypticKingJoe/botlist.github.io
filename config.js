@@ -24,6 +24,7 @@ module.exports = {
 
     bot: {
         owner: 'ウィスリー オング#4138',
-        co_owner: 'Shablammo#0188'
+        co_owner: 'Shablammo#0188',
+        prefix: 'm!'
     }
 }

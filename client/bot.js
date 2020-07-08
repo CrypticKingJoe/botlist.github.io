@@ -7,5 +7,12 @@ client.on('ready', (message) => {
 
 });
 
+client.on('message', (message) => {
+    let prefix = config.bot.prefix;
+    if(message.content === prefix + ' ping') {
+        message.reply('PONG!!!');
+    }
+});
+
 
 client.login(config.discord.token);

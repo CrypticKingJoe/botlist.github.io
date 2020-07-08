@@ -14,6 +14,14 @@ http.createServer(function (request, response) {
         response.end();
     });
 
+    fs.readFile('client/bot.js', (bot, err) => {
+        if(err) throw err;
+
+        response.writeHead(100, {'Content-Type': 'text/js'});
+        response.write(bot);
+        response.end();
+    } )
+
 }).listen(config.port);
 
 
