@@ -31,7 +31,7 @@ route.get("/:id", async (req, res) => {
     await Bots.deleteOne({ botid: id })
 
     req.app.get('client').channels.cache.get(discord.mod_log_id).send(`<@${user.id}> has deleted <@${bot.botid}>`);
-    req.app.get('client').guilds.cache.get(GUILD_ID).members.fetch(u => u.id == id).then(bot => {bot.kick()})
+    req.app.get('client').guilds.cache.get(discord.guild_id).members.fetch(u => u.id == id).then(bot => {bot.kick()})
     res.sendStatus(200)
 });
 
