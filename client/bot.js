@@ -2,6 +2,11 @@ const discord = require ('discord.js');
 const config = require('../config');
 const client = new discord.Client();
 
+
+const { Client, Schema } = require('klasa');
+
+
+
 client.on('ready', (message) => {
     console.log(`Logged In As ${client.user.username}`)
 
