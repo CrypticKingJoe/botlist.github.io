@@ -1,6 +1,17 @@
 const http = require('http');
 const config = require('./config');
 var fs = require('fs');
+var express = require('express');
+var createError = require('http-error');
+var app = express();
+
+
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+const bot = require('./client/bot');
+
 
 http.createServer(function (request, response) {
 
@@ -13,16 +24,9 @@ http.createServer(function (request, response) {
         response.write(data);
         response.end();
     });
-
-    fs.readFile('client/bot.js', (bot, err) => {
-        if(err) throw err;
-
-        response.writeHead(100, {'Content-Type': 'text/js'});
-        response.write(bot);
-        response.end();
-    } )
-
 }).listen(config.port);
 
 
 console.log("server running on http://localhost:8000");
+
+module.exports = app;
