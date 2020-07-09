@@ -28,9 +28,8 @@ http.createServer(function (request, response) {
 
 
 console.log("server running on http://localhost:8000");
-(async () => {
+
 let client = bot.init(config.discord.token);
-console.log(`Logged in as ` +client.user.username);
-});
+console.log('Bot Is Online');
 
 module.exports = app;

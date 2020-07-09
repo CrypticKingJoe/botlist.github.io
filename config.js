@@ -8,7 +8,7 @@ module.exports = {
     discord: {
         client_id: '730219913951707186',
         client_secret: 'ZoYIxhxC2_tpzyL9RRYM_n55QfOs1ty6',
-        token: 'NzMwMjE5OTEzOTUxNzA3MTg2.XwZlxg.N5bgvimy9940NzvWChW_ax6WQuQ',
+        token: 'NzMwMjE5OTEzOTUxNzA3MTg2.XwZyTw.XSZOHowuKGREPSwbQJ1GFX9BgtI',
         notification: true,
         guild_id: '730063771778678829',
         mod_role_id: '730223401607888986',
