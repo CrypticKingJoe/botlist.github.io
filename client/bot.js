@@ -32,7 +32,8 @@ module.exports.init = async (token) => {
 }
 
 bot.on('ready', (message) => {
-    console.log(`Logged In As ${client.user.username}`)
+    console.log(`Logged In As ${bot.user.username}`)
+    bot.user.setActivity("m!help", { type: "PLAYING"});
 });
 
 bot.on('message', async(message) => {
