@@ -1,11 +1,12 @@
 const discord = require ('discord.js');
 const config = require('../config');
-const client = new discord.Client();
+const bot = new discord.Client();
+const fs = require('fs');
 const { Collection } = require("discord.js");
-client.commands = new Collection();
-client.aliases = new Collection();
-client.categories = fs.readdirSync("./commands/");
-client.event = new Collection();
+bot.commands = new Collection();
+bot.aliases = new Collection();
+bot.categories = fs.readdirSync("./client/commands/");
+bot.event = new Collection();
 
 const { Client, Schema } = require('klasa');
 
@@ -30,12 +31,11 @@ module.exports.init = async (token) => {
     return client;
 }
 
-client.on('ready', (message) => {
+bot.on('ready', (message) => {
     console.log(`Logged In As ${client.user.username}`)
-
 });
 
-client.on('message', (message) => {
+bot.on('message', async(message) => {
     let prefix = config.bot.prefix;
     if (message.author.bot) return;
     if (!message.guild) return;
