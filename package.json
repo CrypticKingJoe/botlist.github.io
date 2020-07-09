@@ -24,6 +24,8 @@
   "homepage": "https://github.com/BotList-Team/botlist.github.io#readme",
   "dependencies": {
     "ascii-table": "0.0.9",
+    "body-parser": "^1.19.0",
+    "canvas-constructor": "^3.2.0",
     "cookie-parser": "^1.4.5",
     "discord.js": "^12.2.0",
     "express": "^4.17.1",
@@ -33,6 +35,7 @@
     "mongoose": "^5.9.22",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "unirest": "^0.6.0"
   }
 }

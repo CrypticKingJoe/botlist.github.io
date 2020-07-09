@@ -6,13 +6,13 @@ const Bots = require("../../../models/bots");
 module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
-            aliases: ["bot-info", "info"],
+            aliases: ["bot-info", "bot info"],
             usage: '[User:user]'
         });
     }
 
     async run(message, [user]) {
-        if (!user || !user.bot) return message.channel.send(`Ping a **bot** to get info about.`);
+        if (user || !user.bot) return message.channel.send(`Ping a **bot** to get info about.`);
         if (user.id === message.client.user.id) return message.channel.send(`-_- No`);
 
         const bot = await Bots.findOne({ botid: user.id }, { _id: false })
