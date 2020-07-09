@@ -24,6 +24,7 @@
   "homepage": "https://github.com/BotList-Team/botlist.github.io#readme",
   "dependencies": {
     "ascii-table": "0.0.9",
+    "cookie-parser": "^1.4.5",
     "discord.js": "^12.2.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",

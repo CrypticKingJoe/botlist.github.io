@@ -1,7 +1,7 @@
 const discord = require ('discord.js');
 const config = require('../config');
 const client = new discord.Client();
-const { Client, Collection } = require("discord.js");
+const { Collection } = require("discord.js");
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
