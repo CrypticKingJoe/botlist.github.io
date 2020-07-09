@@ -1,12 +1,12 @@
 const unirest = require("unirest");
 const fetch = require('node-fetch');
-const { CLIENT_ID, CLIENT_SECRET, DOMAIN } = process.env;
+const { discord, url_link } =require('../config');
 
 module.exports.refreshUser = async(opts) => {
     const params = new URLSearchParams();
-    params.append("client_id", CLIENT_ID);
-    params.append("client_secret", CLIENT_SECRET);
-    params.append("redirect_uri", `${DOMAIN}/api/callback`);
+    params.append("client_id", discord.client_id);
+    params.append("client_secret", discord.client_secret);
+    params.append("redirect_uri", `${url_link}/api/callback`);
     params.append("scope", "identify");
 
     if (opts.code) {

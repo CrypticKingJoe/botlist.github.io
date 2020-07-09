@@ -1,8 +1,8 @@
 const { Router } = require("express");
 
-const auth = require("@routes/api/auth/index");
-const reset = require("@routes/api/auth/reset");
-const stats = require("@routes/api/auth/stats");
+const auth = require("./auth/index");
+const reset = require("./auth/reset");
+const stats = require("./auth/stats");
 
 const route = Router();
 

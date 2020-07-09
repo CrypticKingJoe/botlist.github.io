@@ -31,6 +31,7 @@
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "http-error": "0.0.6",
+    "is-html": "^2.0.0",
     "klasa": "^0.5.0",
     "mongoose": "^5.9.22",
     "morgan": "^1.10.0",
