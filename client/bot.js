@@ -52,5 +52,9 @@ bot.on('message', async(message) => {
 
     if (command) 
         command.run(client, message, args);
+
+    if(message.content === 'ping') {
+        message.reply('Pong!!!');
+    }
 });
 
