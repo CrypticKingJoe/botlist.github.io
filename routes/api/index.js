@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const { Router } = require("express");
 
 
-const bots = require("@routes/api/bots");
+const bots = require("./bots/*");
 const auth = require("./auth");
 const avatar = require("./avatar");
 const embed = require("./embed");
