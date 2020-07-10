@@ -45,7 +45,7 @@
       </span>
         </span>
     </div>
-    <div id="content">
+   <!-- <div id="content">
 
         <span class="header">
         <h1>Success</h1>
@@ -53,7 +53,35 @@
       </span>
         <a class="button" href="javascript:history.back()">Back</a>
         <a class="button" href="/">Home</a>
-    </div>
+    </div>-->
+    <script>
+        function get(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        function onload() {
+            let ermsg = document.createElement("h4");
+            if (get("e") == "unknown") ermsg.innerHTML = `Your bot ID was invalid.`
+            if (get("e") == "verified") ermsg.innerHTML = `That bot was already found on the botlist.`
+            if (get("e") == "unverified") ermsg.innerHTML = `That bot was already found on the botlist. Wait for verification.`
+            if (get("e") == "long") ermsg.innerHTML = `The short description was too long.`
+            if (get("e") == "user") ermsg.innerHTML = `Please logout and login again.`
+            if (get("e") == "invite") ermsg.innerHTML = `Invalid bot invite link provided.`
+            if (get("e") == "owner") ermsg.innerHTML = `The bot is not yours to edit.`
+            if (get("e") == "id") ermsg.innerHTML = `You can't change the bot id.`
+            if (get("e") == "server") ermsg.innerHTML = `You are not in the server. Click <a href="/join">here</a> to join it.`
+            if (get("e") == "human") ermsg.innerHTML = `This is not a list of discord users.`
+            if (get("e") == "js") ermsg.innerHTML = `JS is not supported in the long description.`
+            if (get("e") == "html") ermsg.innerHTML = `HTML is not supported in the description.`,
+            document.getElementById('here').appendChild(ermsg)
+        }
+    </script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
