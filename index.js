@@ -1,6 +1,6 @@
 const http = require('http');
 require('dotenv').config();
-require("module-alias/register");
+//require("module-alias/register");
 const config = require('./config');
 var fs = require('fs');
 const mongoose = require('mongoose');
