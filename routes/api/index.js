@@ -3,7 +3,11 @@ const bodyParser = require("body-parser");
 const { Router } = require("express");
 
 
-const bots = require("./bots/");
+var normalizedPath = require("path").join(__dirname, "bots");
+
+require("fs").readdirSync(normalizedPath).forEach(function(file) {
+  require("./bots/" + file);
+});
 const auth = require("./auth");
 const avatar = require("./avatar");
 const embed = require("./embed");
