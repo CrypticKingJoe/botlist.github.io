@@ -28,6 +28,7 @@ module.exports = class extends Command {
             if (!message.member.hasPermission('ADMINISTRATOR')) {
                 return message.channel.send('Sorry You Dont Have Permission To Ban User');
             }
+            if(!server) return message.reply("Your Not In A Server -_-");
             let inline = true;
             let embed = new MessageEmbed()
             .setTitle(`**Banned**`)
@@ -43,7 +44,7 @@ module.exports = class extends Command {
             let banEmbed = new MessageEmbed()
             .setTitle('**Ban**')
             .setColor('PURPLE')
-            .addField('Kicked User', `${toBan} with ID: ${toBan.id}`)
+            .addField('Kicked User', `${user} with ID: ${user.id}`)
             .addField('Kicked By', `<@${message.author.id}> with ID: ${message.author.id}`)
             .addField('Kicked From', `${message.channel}`)
             .addField('Reason', `${reason}`)
