@@ -34,11 +34,13 @@
     "http": "0.0.1-security",
     "http-error": "0.0.6",
     "is-html": "^2.0.0",
+    "is-url": "^1.2.4",
     "klasa": "^0.5.0",
     "mongoose": "^5.9.22",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "path": "^0.12.7",
+    "showdown": "^1.9.1",
     "unirest": "^0.6.0"
   }
 }
