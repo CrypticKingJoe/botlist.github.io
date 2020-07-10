@@ -9,16 +9,18 @@ module.exports = class extends Command {
             permissionLevel: 6,
             requiredPermissions: ['MANAGE_MESSAGES', 'ADMINISTRATOR'],
             description: 'Ban Those Evil Person.',
-            usage: '[user]',
+            usage: '[user][reason]',
             usageDelim: ' ',
             cooldown: 1000
         });
     }
 
-     async run(message, [user]) {
-         if(!user) return message.channel.send("");
+     async run(message, [user, reason]) {
+         if(!user) {    
+            return message.channel.send("You Must Ping A User To Ban Them. :)");
+        } else {
+            
+        }
          if (user.id === message.client.user.id) return message.channel.send(`YOU CANT KICK ME`);
-
-         
       }
 }
