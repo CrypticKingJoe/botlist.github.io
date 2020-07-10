@@ -17,7 +17,7 @@ var logger = require('morgan');
 const bot = require('./client/bot');
 
 
-(async () => {
+
     await mongoose.connect(`${MONGO_DB_URL}`, {
       useCreateIndex: true,
       useNewUrlParser: true,
@@ -28,4 +28,3 @@ const bot = require('./client/bot');
     console.log(colors.yellow(`Logged in as `) + colors.underline.green(client.user.tag));
     await new App(client).listen(PORT || 8080);
     console.log(colors.yellow(`Running on port `) + colors.underline.green(PORT || 8080));
-})()
