@@ -43,7 +43,16 @@ module.exports = class extends Command {
                msg.delete();
             }
             let kickEmbed = new MessageEmbed()
-            
+            .setTitle('**KICK**')
+            .setColor('RED')
+            .addField('Kicked User', `${user} with ID: ${user.id}`)
+            .addField('Kicked By', `<@${message.author.id}> with ID: ${message.author.id}`)
+            .addField('Kicked From', `${message.channel}`)
+            .addField('Reason', `${reason}`)
+            .setTimestamp(new Date())
+            .setFooter('RIP');
+            modlog.send(kickEmbed);
+            message.guild.member(user).kick(reason);
         }  
         message.delete();
     }

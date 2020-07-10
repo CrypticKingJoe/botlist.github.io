@@ -44,9 +44,9 @@ module.exports = class extends Command {
             let banEmbed = new MessageEmbed()
             .setTitle('**Ban**')
             .setColor('PURPLE')
-            .addField('Kicked User', `${user} with ID: ${user.id}`)
-            .addField('Kicked By', `<@${message.author.id}> with ID: ${message.author.id}`)
-            .addField('Kicked From', `${message.channel}`)
+            .addField('Banned User', `${user} with ID: ${user.id}`)
+            .addField('Banned By', `<@${message.author.id}> with ID: ${message.author.id}`)
+            .addField('Banned From', `${message.channel}`)
             .addField('Reason', `${reason}`)
             .setTimestamp(new Date())
             .setFooter('RIP');
