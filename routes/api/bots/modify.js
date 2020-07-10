@@ -4,7 +4,6 @@ const is = require('is-html');
 const { getUser } = require("../../../utils/discordApi.js");
 const Bots = require("../../../models/bots");
 
-const { ADMIN_USERS, GUILD_ID, MOD_LOG_ID } = process.env;
 const {discord} = require('../../../config'); 
 
 const route = Router();
