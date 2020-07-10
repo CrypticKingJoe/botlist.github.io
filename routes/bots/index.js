@@ -4,7 +4,7 @@ const showdown = require('showdown');
 
 const resubmit = require("./resubmit");
 const search = require("./search");
-const edit = require("@./edit");
+const edit = require("./edits");
 const Bots = require("../../models/bots");
 
 const route = Router();
