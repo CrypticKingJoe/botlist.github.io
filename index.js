@@ -10,6 +10,7 @@ var app = express();
 const colors = require('colors');
 const App = require('./structures/app.js');
 const bot = require('./client/bot');
+const {MONGO_DB_URL} = process.env;
 
   let botname = "Muge";
 

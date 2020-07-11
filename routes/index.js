@@ -1,4 +1,5 @@
 const { Router } = require("express");
+var express = require('express');
 
 const bots = require("./bots/index");
 const api = require("./api/index");
@@ -10,11 +11,14 @@ const logout = require("./logout");
 const user = require("./user");
 const me = require("./me");
 
+
 const route = Router();
+const app = express();
 
 route.use("/bots", bots);
 route.use("/api", api);
 route.use("/theme", theme);
+
 
 route.use("/join", join);
 route.use("/logout", logout);
