@@ -3,7 +3,7 @@ module.exports = {
 
     language: 'en-us',
 
-    url_link: 'http://localhost',
+    url_link: 'https://eager-wozniak-e3574e.netlify.app',
 
     discord: {
         client_id: '730219913951707186',
